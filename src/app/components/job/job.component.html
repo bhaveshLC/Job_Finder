@@ -1,0 +1,29 @@
+<ion-card>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>
+        {{ job.jobTitle }}
+      </ion-label>
+      <ion-button slot="end" fill="clear" color="medium">
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      <p>
+        {{ job?.salary }}
+        <ion-chip>FullTime</ion-chip>
+      </p>
+    </ion-item>
+    <ion-item>
+      <ion-text color="medium">{{ job?.company }}</ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-text color="medium">{{ job?.location }}</ion-text>
+    </ion-item>
+    <ion-item>Last Date : {{ job?.expireOn | date }}</ion-item>
+    <ion-item>
+      <ion-button size="normal" color="dark">View </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-card>
